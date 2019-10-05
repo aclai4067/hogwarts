@@ -13,14 +13,6 @@ nav {
   box-shadow: $box-shadow;
   justify-content: space-between;
 
-  a{
-    color: $mutednavy;
-
-    &:hover{
-        color: $white;
-    }
-  }
-
   ul{
     list-style-type: none;
     line-height: 56px;
@@ -31,10 +23,14 @@ nav {
         &:hover{
             background-color: $darkgray;
         }
+
+        a, a:hover{
+          @include default-font(1em);
+        }
     }
   }
 }
 
 .brand{
-    font-size: 2em;
+    @include default-font(2em);
 }
