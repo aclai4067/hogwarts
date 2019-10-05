@@ -16,32 +16,32 @@
         width: 100%;
       }
   }
+
+  h2{
+    @include default-font(1.5em);
+  }
+}
+
+@mixin house-styles($housecolor) {
+    @extend %studentCard;
+
+    h2{
+      color: $housecolor;
+    } 
 }
 
 .student-gryffindor{
-  @extend %studentCard;
-  h2{
-    color: $gryffindor;
-  }
+  @include house-styles($gryffindor)
 }
 
 .student-slytherin{
-    @extend %studentCard;
-    h2{
-      color: $slytherin;
-    }
+  @include house-styles($slytherin)
   }
 
   .student-ravenclaw{
-    @extend %studentCard;
-    h2{
-      color: $ravenclaw;
-    }
+  @include house-styles($ravenclaw)
   }
 
   .student-hufflepuff{
-    @extend %studentCard;
-    h2{
-      color: $hufflepuff;
-    }
+  @include house-styles($hufflepuff)
   }
