@@ -1,5 +1,6 @@
 @import 'bootstrap';
+@import '../styles/colors';
 
 body{
-    background-color: lightgray;
+    background-color: $lightwarmgrey;
 }
